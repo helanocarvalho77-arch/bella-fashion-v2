@@ -1,0 +1,568 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bella Fashion — Moda feminina em Goianésia, GO</title>
+<meta name="description" content="Bella Fashion, Bella Íntima e Bella Shoes. Coleções pensadas para mulheres de diferentes estilos. Envios para todo o Brasil.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fdf8f6; --bg2:#f8ebe8; --blush:#e9c9c4; --rose:#b9707a; --rose-d:#8f4a55;
+  --ink:#241b1c; --muted:#6f6264; --gold:#b8935a; --card:#fff; --line:#ecdcd8;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Jost',system-ui,sans-serif;
+  --r:18px; --shadow:0 10px 30px rgba(120,70,70,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+.wrap{width:min(1180px,92%);margin-inline:auto}
+.eyebrow{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:500}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1}
+h2{font-size:clamp(2rem,4vw,2.8rem)}
+em{font-style:italic}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.85rem 1.5rem;border-radius:8px;font-weight:500;font-size:.92rem;transition:.25s}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--rose-d);transform:translateY(-2px)}
+.btn-line{border:1px solid var(--ink)}.btn-line:hover{background:var(--ink);color:#fff}
+.btn-wa{background:#25a55a;color:#fff}.btn-wa:hover{background:#1d8a49}
+section{padding:5rem 0}
+.sec-head{text-align:center;margin-bottom:2.5rem}
+.sec-head p{color:var(--muted);margin-top:.5rem}
+
+/* top bar + header */
+.top{background:var(--ink);color:#fff;font-size:.8rem;text-align:center;padding:.5rem 1rem;letter-spacing:.03em}
+header{position:sticky;top:0;z-index:50;background:rgba(253,248,246,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{font-family:var(--serif);font-size:1.9rem;letter-spacing:.18em;text-transform:uppercase;line-height:1;text-align:center}
+.logo small{display:block;font-family:var(--sans);font-size:.5rem;letter-spacing:.3em;color:var(--gold);margin-top:4px}
+nav ul{display:flex;gap:2rem;list-style:none;font-size:.92rem}
+nav a{padding:.4rem 0;border-bottom:1px solid transparent;transition:.2s}
+nav a:hover,nav a.active{border-color:var(--ink)}
+.icons{display:flex;gap:.4rem;align-items:center}
+.ibtn{width:42px;height:42px;display:grid;place-items:center;border-radius:50%;position:relative;transition:.2s}
+.ibtn:hover{background:var(--bg2)}
+.badge{position:absolute;top:2px;right:0;background:var(--rose);color:#fff;font-size:.65rem;min-width:18px;height:18px;border-radius:9px;display:grid;place-items:center;padding:0 4px}
+.burger{display:none}
+
+/* hero */
+.hero{padding:0;background:linear-gradient(110deg,#fbefec 0%,#f3d9d4 100%);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;min-height:560px;gap:2rem}
+.hero h1{font-size:clamp(2.8rem,6vw,4.6rem);margin:1rem 0}
+.hero p.lead{color:var(--muted);max-width:420px;font-size:1.05rem;margin-bottom:1.8rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-bottom:2rem}
+.perks{display:flex;gap:1.6rem;flex-wrap:wrap;font-size:.78rem;color:var(--muted)}
+.perks div{display:flex;gap:.6rem;align-items:center;line-height:1.25}
+.perks span.c{width:34px;height:34px;border:1px solid var(--rose);border-radius:50%;display:grid;place-items:center;color:var(--rose)}
+.hero-art{position:relative;height:100%;min-height:480px;display:flex;align-items:flex-end;justify-content:center}
+.arch{width:min(380px,80%);height:480px;border-radius:200px 200px 0 0;background:linear-gradient(180deg,#e8bfb8,#c98a92);position:relative;overflow:hidden;display:grid;place-items:center}
+.arch svg{width:70%;opacity:.9}
+.arch .ph{position:absolute;bottom:14px;left:0;right:0;text-align:center;color:#fff;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;opacity:.85}
+.float-card{position:absolute;right:0;top:60px;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:var(--r);padding:1.2rem 1.4rem;box-shadow:var(--shadow);width:190px}
+.float-card h3{font-size:1.6rem;margin-bottom:.3rem}
+.float-card p{font-size:.8rem;color:var(--muted)}
+.float-card a{margin-top:.8rem;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center}
+
+/* categories */
+.cats{display:grid;grid-template-columns:repeat(7,1fr);gap:1rem}
+.cat{text-align:center;cursor:pointer}
+.cat .a{aspect-ratio:3/4;border-radius:999px 999px 14px 14px;display:grid;place-items:center;transition:.3s;overflow:hidden;position:relative}
+.cat:hover .a{transform:translateY(-6px);box-shadow:var(--shadow)}
+.cat .a svg{width:46%;color:rgba(255,255,255,.92)}
+.cat b{display:block;margin-top:.8rem;font-weight:500;font-size:.88rem}
+
+/* products */
+.products-bg{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.filters{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-bottom:2rem}
+.chip{padding:.55rem 1.1rem;border-radius:999px;border:1px solid var(--line);background:#fff;font-size:.85rem;transition:.2s}
+.chip:hover{border-color:var(--rose)}
+.chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.card{background:var(--card);border-radius:var(--r);padding:.8rem;box-shadow:var(--shadow);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-5px)}
+.thumb{aspect-ratio:4/5;border-radius:12px;position:relative;display:grid;place-items:center;overflow:hidden}
+.thumb svg{width:50%;color:rgba(255,255,255,.9)}
+.tag{position:absolute;top:10px;left:10px;background:#fff;font-size:.68rem;padding:.2rem .6rem;border-radius:999px;font-weight:500}
+.fav{position:absolute;top:8px;right:8px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.85);display:grid;place-items:center;transition:.2s}
+.fav.on{color:#d0364f}.fav.on svg{fill:currentColor}
+.card .info{padding:.9rem .3rem .3rem;display:flex;flex-direction:column;gap:.45rem;flex:1}
+.card h3{font-family:var(--sans);font-size:.95rem;font-weight:500}
+.card .meta{font-size:.78rem;color:var(--muted)}
+.price{font-weight:600}
+.price s{color:var(--muted);font-weight:400;margin-left:.4rem;font-size:.85rem}
+.price.q{font-weight:500;color:var(--rose-d);font-size:.88rem}
+.sizes{display:flex;gap:.3rem;flex-wrap:wrap}
+.sz{min-width:32px;height:30px;border:1px solid var(--line);border-radius:6px;font-size:.75rem;transition:.15s}
+.sz.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.add{margin-top:auto;width:100%;justify-content:center;padding:.7rem;font-size:.85rem}
+
+/* promo */
+.promo{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.promo::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(185,112,122,.35),transparent 55%)}
+.promo .wrap{position:relative}
+.promo .sec-head p{color:#d8c8c8}
+.big70{font-family:var(--serif);font-size:clamp(3rem,8vw,6rem);color:var(--blush);line-height:1}
+.pcards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2rem}
+.pc{border:1px solid rgba(255,255,255,.18);border-radius:var(--r);padding:1.6rem;background:rgba(255,255,255,.05);transition:.3s}
+.pc:hover{background:rgba(255,255,255,.1);transform:translateY(-4px)}
+.pc small{color:var(--blush);letter-spacing:.2em;text-transform:uppercase;font-size:.7rem}
+.pc h3{font-size:1.5rem;margin:.4rem 0 .3rem}
+.pc p{color:#cdbdbd;font-size:.86rem;margin-bottom:1rem}
+.pc .pr{font-family:var(--serif);font-size:2.2rem;color:#fff}
+
+/* why */
+.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}
+.why .pic{aspect-ratio:4/5;border-radius:var(--r);background:linear-gradient(160deg,#d8a7a6,#8f4a55);display:grid;place-items:center;position:relative;overflow:hidden}
+.why .pic svg{width:36%;color:rgba(255,255,255,.85)}
+.why .pic .ph{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:#fff;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+.why h2{margin:.8rem 0 1rem}
+.why p{color:var(--muted);margin-bottom:1.6rem}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.feat div{display:flex;gap:.8rem;align-items:flex-start;font-size:.9rem}
+.feat .c{flex:none;width:42px;height:42px;border-radius:50%;background:var(--bg2);display:grid;place-items:center;color:var(--rose-d)}
+.feat b{display:block;font-weight:500}.feat span{color:var(--muted);font-size:.82rem}
+.stats{background:var(--ink);color:#fff;padding:2rem 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);text-align:center}
+.stats div+div{border-left:1px solid rgba(255,255,255,.15)}
+.stats b{display:block;font-family:var(--serif);font-size:2.4rem;font-weight:500;font-style:italic}
+.stats span{font-size:.8rem;color:#cdbdbd}
+
+/* testimonials */
+.tslider{position:relative}
+.ttrack{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.t{background:#fff;border-radius:var(--r);padding:1.6rem;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:.8rem}
+.stars{color:var(--gold);letter-spacing:2px}
+.t p{font-size:.93rem;color:#4a3d3f;flex:1}
+.t .who{display:flex;gap:.7rem;align-items:center;font-size:.82rem}
+.t .av{width:38px;height:38px;border-radius:50%;background:var(--blush);display:grid;place-items:center;font-weight:600;color:var(--rose-d)}
+.t .who small{display:block;color:var(--muted)}
+.tnav{display:flex;gap:.6rem;justify-content:center;margin-top:1.6rem}
+.tnav button{width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:#fff;transition:.2s}
+.tnav button:hover{background:var(--ink);color:#fff}
+
+/* store */
+.store{background:var(--bg2)}
+.store .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.info-list{list-style:none;display:grid;gap:1rem;margin:1.5rem 0}
+.info-list li{display:flex;gap:.9rem;align-items:flex-start}
+.info-list .c{flex:none;width:40px;height:40px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--rose-d)}
+.info-list b{display:block;font-weight:500}.info-list span{color:var(--muted);font-size:.9rem}
+.notice{background:#fff;border-left:3px solid var(--gold);padding:1rem 1.2rem;border-radius:8px;font-size:.9rem;margin-bottom:1.5rem}
+.storepic{aspect-ratio:5/4;border-radius:var(--r);background:linear-gradient(135deg,#f3d9d4,#c98a92);display:grid;place-items:center;color:#fff;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.storepic svg{width:30%;opacity:.9}
+.storepic .ph{position:absolute;bottom:16px;left:0;right:0;text-align:center;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase}
+
+/* news */
+.news{padding:0 0 4rem;background:var(--bg2)}
+.newsbox{background:var(--blush);border-radius:28px;padding:1.6rem 2rem;display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.newsbox h3{font-size:1.6rem}.newsbox p{font-size:.88rem;color:#5b4648}
+.newsbox form{display:flex;background:#fff;border-radius:10px;padding:.35rem;flex:1;min-width:280px;max-width:480px}
+.newsbox input{flex:1;border:0;outline:0;padding:.6rem .9rem;font:inherit;background:none;min-width:0}
+
+footer{background:var(--ink);color:#d9cccc;padding:3.5rem 0 1.5rem;font-size:.88rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2rem}
+footer h4{color:#fff;font-weight:500;margin-bottom:.9rem}
+footer li{list-style:none;margin-bottom:.45rem}
+footer a:hover{color:#fff}
+.fbot{border-top:1px solid rgba(255,255,255,.12);margin-top:2.5rem;padding-top:1.2rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;font-size:.78rem}
+.pay{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem}
+.pay span{background:#fff;color:var(--ink);font-size:.7rem;font-weight:600;padding:.3rem .6rem;border-radius:5px}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(20,10,10,.5);opacity:0;pointer-events:none;transition:.3s;z-index:90}
+.overlay.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:100;transform:translateX(100%);transition:.35s;display:flex;flex-direction:column}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 1.4rem;border-bottom:1px solid var(--line)}
+.dh h3{font-size:1.6rem}
+.items{flex:1;overflow:auto;padding:1rem 1.4rem}
+.empty{text-align:center;color:var(--muted);margin-top:3rem}
+.it{display:grid;grid-template-columns:64px 1fr auto;gap:.8rem;padding:.8rem 0;border-bottom:1px solid var(--line);align-items:center}
+.it .im{width:64px;height:80px;border-radius:8px}
+.it b{font-weight:500;font-size:.9rem;display:block}
+.it small{color:var(--muted)}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:6px;margin-top:.3rem}
+.qty button{width:26px;height:26px}
+.qty span{min-width:24px;text-align:center;font-size:.85rem}
+.rm{color:var(--muted);font-size:.78rem;text-decoration:underline}
+.df{padding:1.2rem 1.4rem;border-top:1px solid var(--line);display:grid;gap:.8rem}
+.tot{display:flex;justify-content:space-between;font-weight:600}
+.df small{color:var(--muted);font-size:.76rem}
+.toast{position:fixed;bottom:24px;left:50%;transform:translate(-50%,120px);background:var(--ink);color:#fff;padding:.8rem 1.4rem;border-radius:10px;z-index:200;transition:.35s;font-size:.9rem}
+.toast.on{transform:translate(-50%,0)}
+.wa-float{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25a55a;color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:80;transition:.2s}
+.wa-float:hover{transform:scale(1.08)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:.8s}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:980px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .hero .wrap,.why .wrap,.store .wrap{grid-template-columns:1fr}
+  .hero-art{min-height:380px}.arch{height:380px}
+  .pcards,.ttrack{grid-template-columns:1fr}
+  .ttrack .t:not(.show){display:none}
+  .fgrid{grid-template-columns:1fr 1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr;gap:1.2rem}.stats div:nth-child(3){border-left:0}
+  nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);max-height:0;overflow:hidden;transition:.3s}
+  nav.on{max-height:340px}
+  nav ul{flex-direction:column;padding:1rem 4%;gap:.9rem}
+  .burger{display:grid}
+}
+@media(max-width:560px){
+  section{padding:3.5rem 0}
+  .cats{grid-template-columns:repeat(2,1fr)}
+  .grid{gap:.8rem}.card{padding:.55rem}
+  .feat{grid-template-columns:1fr}
+  .float-card{display:none}
+  .fgrid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="top">Envios diários para todo o Brasil via Correios (PAC e SEDEX) · Atendimento pelo WhatsApp</div>
+
+<header>
+  <div class="wrap nav">
+    <button class="ibtn burger" id="burger" aria-label="Menu"><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h16M3 11h16M3 16h16"/></svg></button>
+    <a href="#top" class="logo">Bella<small>FASHION</small></a>
+    <nav id="nav">
+      <ul>
+        <li><a href="#inicio" class="active">Início</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#black">Black Belas</a></li>
+        <li><a href="#clientes">Clientes</a></li>
+        <li><a href="#loja">Nossa loja</a></li>
+      </ul>
+    </nav>
+    <div class="icons">
+      <button class="ibtn" id="favBtn" aria-label="Favoritos"><svg width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.5 18s-7-4.4-7-9.4A3.9 3.9 0 0 1 10.5 6a3.9 3.9 0 0 1 7 2.6c0 5-7 9.4-7 9.4z"/></svg><span class="badge" id="favCount">0</span></button>
+      <button class="ibtn" id="cartBtn" aria-label="Sacola"><svg width="21" height="21" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h13l-1 11H5L4 7zM7.5 7V5.5a3 3 0 0 1 6 0V7"/></svg><span class="badge" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Moda feminina · Goianésia, GO</span>
+      <h1>Coleções para<br>mulheres de <em>todos os estilos</em></h1>
+      <p class="lead">Vestidos, conjuntos de alfaiataria, jeans, moda infantil, lingerie, calçados e semijoias. Tudo em um só lugar, da nossa loja para todo o Brasil.</p>
+      <div class="cta">
+        <a href="#produtos" class="btn btn-dark">Ver peças →</a>
+        <a href="#black" class="btn btn-line">Black Belas até 70% OFF</a>
+      </div>
+      <div class="perks">
+        <div><span class="c"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 14C2 6 8 2 14 2c0 7-4 12-12 12zM2 14l6-6"/></svg></span>Peças<br>selecionadas</div>
+        <div><span class="c"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 11h14M3 11l5-7 5 7"/></svg></span>Looks para<br>toda ocasião</div>
+        <div><span class="c"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 8h12l-2-3M13 8l-2 3"/></svg></span>Envio para<br>todo o Brasil</div>
+      </div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="arch">
+        <svg viewBox="0 0 100 140" fill="none" stroke="#fff" stroke-width="1.6"><path d="M38 10c0 8 4 12 12 12s12-4 12-12M38 10l-14 28 8 5-4 88h56l-4-88 8-5-14-28"/><path d="M32 43c10 8 26 8 36 0"/></svg>
+        <div class="ph">Espaço para foto da coleção</div>
+      </div>
+      <div class="float-card">
+        <h3>Black Belas</h3>
+        <p>Até 70% OFF em peças selecionadas</p>
+        <a href="#black" aria-label="Ver promoção">→</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIAS -->
+<section id="categorias">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Compre por categoria</span><h2>Encontre seu estilo</h2></div>
+    <div class="cats" id="cats"></div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="products-bg" id="produtos">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Nossas peças</span><h2>Os queridinhos da loja</h2><p>Escolha o tamanho, monte sua sacola e finalize direto no WhatsApp.</p></div>
+    <div class="filters" id="filters"></div>
+    <div class="grid" id="grid"></div>
+    <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:2rem">Valores não exibidos? Chame no WhatsApp: as peças chegam toda semana. Não fazemos reservas, apenas mediante pagamento.</p>
+  </div>
+</section>
+
+<!-- BLACK BELAS -->
+<section class="promo" id="black">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Campanha</span><h2>BLACK <em>Belas</em></h2><div class="big70">até 70% OFF</div><p>Ofertas por tempo limitado, enquanto durarem os estoques.</p></div>
+    <div class="pcards">
+      <div class="pc reveal"><small>Infantil</small><h3>Vestido infantil estampado</h3><p>Alças finas com laço no ombro e barra com babado leve.</p><div class="pr">R$ 39,99</div><button class="btn btn-line add-promo" style="margin-top:1rem;border-color:#fff" data-id="p1">Adicionar à sacola</button></div>
+      <div class="pc reveal"><small>Alfaiataria</small><h3>Calça de alfaiataria</h3><p>Cintura alta com pregas e cinto forrado. Azul-claro e azul-royal.</p><div class="pr">R$ 29,99</div><button class="btn btn-line add-promo" style="margin-top:1rem;border-color:#fff" data-id="p2">Adicionar à sacola</button></div>
+      <div class="pc reveal"><small>Alfaiataria</small><h3>Conjunto de alfaiataria</h3><p>Colete estruturado com calça ou short. Verde, menta e azul-bebê.</p><div class="pr">R$ 99,99</div><button class="btn btn-line add-promo" style="margin-top:1rem;border-color:#fff" data-id="p3">Adicionar à sacola</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE -->
+<section class="why">
+  <div class="wrap">
+    <div class="pic reveal">
+      <svg viewBox="0 0 100 140" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M38 10c0 8 4 12 12 12s12-4 12-12M38 10l-14 28 8 5-4 88h56l-4-88 8-5-14-28"/></svg>
+      <div class="ph">Espaço para foto da loja ou da equipe</div>
+    </div>
+    <div class="reveal">
+      <span class="eyebrow">Por que a Bella</span>
+      <h2>Mais do que moda, <em>uma experiência</em></h2>
+      <p>Uma loja ampla de dois andares, com araras organizadas por cores, provadores iluminados e uma equipe pronta para ajudar você a montar o look certo. Quem está longe compra pelo WhatsApp e recebe em casa.</p>
+      <div class="feat">
+        <div><span class="c"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l2.4 5 5.6.8-4 4 1 5.6-5-2.7-5 2.7 1-5.6-4-4 5.6-.8z"/></svg></span><p style="margin:0"><b>Variedade</b><span>Fashion, íntima, shoes e semijoias</span></p></div>
+        <div><span class="c"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h11V5H2zM13 8h3l2 3v1h-5M5 15a1.5 1.5 0 1 0 0 .1M15 15a1.5 1.5 0 1 0 0 .1"/></svg></span><p style="margin:0"><b>Envio nacional</b><span>PAC e SEDEX, todos os dias</span></p></div>
+        <div><span class="c"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 10a7 7 0 0 1 14 0v4H3zM5 14v2h3v-4"/></svg></span><p style="margin:0"><b>Atendimento próximo</b><span>Equipe de 10 profissionais</span></p></div>
+        <div><span class="c"><svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 2l7 3v5c0 4-3 7-7 8-4-1-7-4-7-8V5z"/></svg></span><p style="margin:0"><b>Compra segura</b><span>Pagamento antes do envio</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div><b>58,4 mil</b><span>seguidores no Instagram</span></div>
+    <div><b>5.999</b><span>publicações no perfil</span></div>
+    <div><b>10</b><span>profissionais na equipe</span></div>
+    <div><b>2 andares</b><span>de loja física</span></div>
+  </div>
+</div>
+
+<!-- DEPOIMENTOS -->
+<section id="clientes">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="eyebrow">Clientes reais</span><h2>Amadas por quem <em>já comprou</em></h2><p>Mensagens e fotos compartilhadas pelas clientes nos stories da loja.</p></div>
+    <div class="tslider">
+      <div class="ttrack" id="ttrack"></div>
+      <div class="tnav"><button id="tprev" aria-label="Anterior">←</button><button id="tnext" aria-label="Próximo">→</button></div>
+    </div>
+  </div>
+</section>
+
+<!-- LOJA -->
+<section class="store" id="loja">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Visite a Bella</span>
+      <h2 style="margin:.6rem 0">Nossa loja em <em>Goianésia</em></h2>
+      <div class="notice"><b>Atenção:</b> não fazemos reservas de peças, apenas mediante pagamento.</div>
+      <ul class="info-list">
+        <li><span class="c"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 16s5-4.5 5-8.5a5 5 0 0 0-10 0C4 11.500 9 16 9 16zM9 9a1.5 1.5 0 1 0 0-.1"/></svg></span><p><b>Endereço</b><span>Av. Goiás, 346, entre as ruas 20 e 22<br>Goianésia, GO · CEP 76380-732</span></p></li>
+        <li><span class="c"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="9" cy="9" r="7"/><path d="M9 5v4l3 2"/></svg></span><p><b>Horário</b><span>Segunda a sexta: 08h às 19h<br>Sábado: 08h às 18h</span></p></li>
+        <li><span class="c"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 3h3l1.5 4-2 1.5a8 8 0 0 0 3 3L11 9.500l4 1.500v3a2 2 0 0 1-2 2A11 11 0 0 1 2 5a2 2 0 0 1 2-2z"/></svg></span><p><b>WhatsApp / telefone</b><span>+55 62 98545-1905</span></p></li>
+        <li><span class="c"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="14" height="14" rx="4"/><circle cx="9" cy="9" r="3"/></svg></span><p><b>Instagram</b><span><a href="https://instagram.com/loja.bellafashiongsia" target="_blank" rel="noopener">@loja.bellafashiongsia</a></span></p></li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-wa" href="https://wa.me/5562985451905?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Bella%20Fashion." target="_blank" rel="noopener">Falar no WhatsApp</a>
+        <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&query=Av.+Goi%C3%A1s+346+Goian%C3%A9sia+GO" target="_blank" rel="noopener">Como chegar</a>
+      </div>
+    </div>
+    <div class="storepic reveal">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 40l8-24h64l8 24M14 40v44h72V40M40 84V56h20v28"/></svg>
+      <div class="ph">Espaço para foto da fachada</div>
+    </div>
+  </div>
+</section>
+
+<section class="news">
+  <div class="wrap">
+    <div class="newsbox">
+      <div><h3>Receba as novidades da Bella</h3><p>Lançamentos e promoções em primeira mão pelo WhatsApp.</p></div>
+      <form id="newsForm"><input type="text" id="newsName" placeholder="Seu nome" required><button class="btn btn-dark" type="submit">Quero receber</button></form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div><div class="logo" style="text-align:left;color:#fff">Bella<small>FASHION</small></div><p style="margin-top:1rem;max-width:270px">Bella Fashion, Bella Íntima e Bella Shoes. Coleções pensadas para mulheres de diferentes estilos.</p></div>
+      <div><h4>Loja</h4><ul><li><a href="#categorias">Categorias</a></li><li><a href="#produtos">Produtos</a></li><li><a href="#black">Black Belas</a></li></ul></div>
+      <div><h4>Atendimento</h4><ul><li><a href="#loja">Endereço e horários</a></li><li>Envios via Correios</li><li>Sem reservas sem pagamento</li></ul></div>
+      <div><h4>Contato</h4><ul><li>+55 62 98545-1905</li><li><a href="https://instagram.com/loja.bellafashiongsia" target="_blank" rel="noopener">@loja.bellafashiongsia</a></li></ul><div class="pay"><span>PIX</span><span>Cartão</span></div></div>
+    </div>
+    <div class="fbot"><span>© <span id="yr"></span> Bella Fashion · Goianésia, GO. Todos os direitos reservados.</span><span>Use sua confiança com a Bella ♥</span></div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5562985451905?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Bella%20Fashion." target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14.100c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .200-3.300-.700-2.800-1.100-4.600-4-4.700-4.200-.100-.200-1.100-1.500-1.100-2.800s.700-2 1-2.300c.200-.200.500-.300.700-.300h.500c.200 0 .400 0 .600.500.200.600.800 2 .800 2.100.1.100.1.300 0 .500-.1.200-.1.300-.3.500l-.4.500c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.500.100.600-.1l.9-1c.2-.3.400-.2.600-.100l1.900.9c.3.100.5.200.5.300.1.200.1.700-.1 1.300z"/></svg></a>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Sacola">
+  <div class="dh"><h3 id="dTitle">Minha sacola</h3><button class="ibtn" id="dClose" aria-label="Fechar">✕</button></div>
+  <div class="items" id="items"></div>
+  <div class="df" id="df">
+    <div class="tot"><span>Total das peças com valor</span><span id="total">R$ 0,00</span></div>
+    <small id="totNote"></small>
+    <input id="custName" placeholder="Seu nome" style="padding:.75rem;border:1px solid var(--line);border-radius:8px;font:inherit">
+    <input id="custCity" placeholder="Cidade / Estado (para o frete)" style="padding:.75rem;border:1px solid var(--line);border-radius:8px;font:inherit">
+    <button class="btn btn-wa" id="checkout" style="justify-content:center">Finalizar pelo WhatsApp</button>
+    <small>O pedido será enviado à loja pelo WhatsApp. Frete e forma de pagamento são combinados no atendimento.</small>
+  </div>
+</aside>
+<div class="toast" id="toast"></div>
+
+<script>
+const WA = "5562985451905";
+const ICONS = {
+  dress:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 6c0 6 3 9 8 9s8-3 8-9M22 6l-9 18 6 4-3 56h36l-3-56 6-4-9-18"/></svg>',
+  set:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6l-8 20 8 4V50h24V30l8-4-8-20-6 6h-12zM20 52l-4 34h12l2-24 2 24h12l-4-34"/></svg>',
+  jeans:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 6h28l4 80H34L30 36l-4 50H12z"/></svg>',
+  kid:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 20c0 4 2 6 6 6s6-2 6-6M24 20l-8 12 6 4-2 38h28l-2-38 6-4-8-12"/></svg>',
+  intima:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 30c8 2 14 8 22 22 8-14 14-20 22-22-2 14-10 22-22 24C18 52 10 44 8 30z"/></svg>',
+  shoes:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 62c10 0 14-10 16-22l10 10c6 6 12 8 18 10v6H8z"/></svg>',
+  jewel:'<svg viewBox="0 0 60 90" fill="none" stroke="currentColor" stroke-width="2"><circle cx="30" cy="54" r="14"/><path d="M24 36l6-10 6 10"/></svg>'
+};
+const CATS=[
+ {k:'Vestidos',i:'dress',g:['#e7b9bf','#c4767f']},
+ {k:'Conjuntos',i:'set',g:['#bfd8c9','#6f9c85']},
+ {k:'Jeans',i:'jeans',g:['#aebfdc','#5d7399']},
+ {k:'Infantil',i:'kid',g:['#f6d3d8','#e19aaa']},
+ {k:'Bella Íntima',i:'intima',g:['#e6c7da','#a9708f']},
+ {k:'Bella Shoes',i:'shoes',g:['#d9c1a5','#a07a50']},
+ {k:'Semijoias',i:'jewel',g:['#ead9ae','#b8935a']}
+];
+// Edite aqui os produtos. price: null = "Consulte o valor" (preço não informado no material).
+const PRODUCTS=[
+ {id:'p1',n:'Vestido infantil estampado',c:'Infantil',price:39.99,old:null,tag:'Black Belas',sz:['2','4','6','8','10'],d:'Laço no ombro, babado leve'},
+ {id:'p2',n:'Calça de alfaiataria cintura alta',c:'Jeans',cat2:'Conjuntos',price:29.99,old:null,tag:'Black Belas',sz:['36','38','40','42','44'],d:'Azul-claro e azul-royal'},
+ {id:'p3',n:'Conjunto de alfaiataria',c:'Conjuntos',price:99.99,old:null,tag:'Black Belas',sz:['P','M','G','GG'],d:'Verde-esmeralda, menta e azul-bebê'},
+ {id:'p4',n:'Vestido Malu assimétrico',c:'Vestidos',price:null,tag:'Mais pedido',sz:['P','M','G'],d:'Um ombro só com babado na barra',g:['#f0dc9a','#d0a94e']},
+ {id:'p5',n:'Vestido longo de festa',c:'Vestidos',price:null,tag:'Festa',sz:['P','M','G'],d:'Rosa, vermelho, azul e marrom',g:['#e7b9bf','#b0505e']},
+ {id:'p6',n:'Vestido mullet com babados',c:'Vestidos',price:null,tag:'Novo',sz:['P','M','G'],d:'Marinho, preto, lilás e off-white',g:['#c7b8e0','#7d6aa8']},
+ {id:'p7',n:'Vestido curto floral rodado',c:'Vestidos',price:null,tag:'',sz:['P','M','G'],d:'Estampa floral azul e branca',g:['#cfe0f2','#6f93bf']},
+ {id:'p8',n:'Conjunto jeans cropped e calça',c:'Jeans',price:null,tag:'Novo',sz:['36','38','40','42'],d:'Jeans escuro e médio',g:['#aebfdc','#5d7399']},
+ {id:'p9',n:'Conjunto branco de verão',c:'Conjuntos',price:null,tag:'',sz:['P','M','G'],d:'Top cropped e minissaia plissada',g:['#f1e6e4','#cdb3ae']},
+ {id:'p10',n:'Vestido de festa infantil',c:'Infantil',price:null,tag:'Festa',sz:['2','4','6','8','10'],d:'Tule e laços, rosa-bebê',g:['#f9dbe2','#e79aae']},
+ {id:'p11',n:'Linha Bella Íntima',c:'Bella Íntima',price:null,tag:'',sz:['P','M','G'],d:'Consulte modelos e cores',g:['#e6c7da','#a9708f']},
+ {id:'p12',n:'Coleção Bella Shoes',c:'Bella Shoes',price:null,tag:'Nova coleção',sz:['34','35','36','37','38','39'],d:'Consulte modelos disponíveis',g:['#d9c1a5','#a07a50']}
+];
+const TESTI=[
+ {n:'Cliente do Direct',s:'Chá revelação',t:'Olá, bom dia! Comprei um desse na cor branca para meu chá revelação. Ele é simplesmente maravilhoso, não me arrependo da compra e o atendimento foi perfeito. Parabéns!'},
+ {n:'Cliente de Goiânia',s:'@ju_lopes_123 · Goiânia, GO',t:'Cliente linda de Goiânia arrasou na escolha do vestido curto rodado de um ombro só.'},
+ {n:'Cliente @laranios_adv',s:'Vestido Malu',t:'Cliente maravilhosa arrasando com o nosso vestido Malu.'},
+ {n:'Cliente do Direct',s:'Vestido Malu rosa',t:'Amei o vestido!!'},
+ {n:'Cliente @fabiolaa_souza',s:'Vestido de festa',t:'Vestido dessa loja incrível!'},
+ {n:'Cliente @mrduda_556',s:'Vestido floral',t:'Arrasou, linda! A cliente mandou várias fotos usando a peça.'}
+];
+const $=s=>document.querySelector(s);
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL'});
+const load=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))||d}catch(e){return d}};
+const save=(k,v)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}};
+let cart=load('bella_cart',[]), favs=load('bella_favs',[]), filter='Todos', showFavs=false;
+const gradOf=p=>{const c=CATS.find(x=>x.k===p.c)||CATS[0];const g=p.g||c.g;return `linear-gradient(160deg,${g[0]},${g[1]})`};
+const iconOf=p=>(CATS.find(x=>x.k===p.c)||CATS[0]).i;
+
+// categorias
+$('#cats').innerHTML=CATS.map(c=>`<div class="cat reveal" data-k="${c.k}"><div class="a" style="background:linear-gradient(160deg,${c.g[0]},${c.g[1]})">${ICONS[c.i]}</div><b>${c.k} →</b></div>`).join('');
+document.querySelectorAll('.cat').forEach(el=>el.onclick=()=>{filter=el.dataset.k;showFavs=false;renderFilters();renderGrid();$('#produtos').scrollIntoView({behavior:'smooth'})});
+
+function renderFilters(){
+  const ks=['Todos',...CATS.map(c=>c.k)];
+  $('#filters').innerHTML=ks.map(k=>`<button class="chip ${(!showFavs&&k===filter)?'on':''}" data-k="${k}">${k}</button>`).join('')+(showFavs?`<button class="chip on">♥ Favoritos</button>`:'');
+  document.querySelectorAll('#filters .chip').forEach(b=>b.onclick=()=>{if(!b.dataset.k)return;filter=b.dataset.k;showFavs=false;renderFilters();renderGrid()});
+}
+const selSize={};
+function renderGrid(){
+  let list=PRODUCTS.filter(p=>showFavs?favs.includes(p.id):(filter==='Todos'||p.c===filter||p.cat2===filter));
+  if(!list.length){$('#grid').innerHTML='<p style="grid-column:1/-1;text-align:center;color:var(--muted)">Nenhuma peça por aqui ainda. Chame no WhatsApp para saber das novidades.</p>';return}
+  $('#grid').innerHTML=list.map(p=>`
+  <article class="card">
+    <div class="thumb" style="background:${gradOf(p)}">${ICONS[iconOf(p)]}${p.tag?`<span class="tag">${p.tag}</span>`:''}
+      <button class="fav ${favs.includes(p.id)?'on':''}" data-id="${p.id}" aria-label="Favoritar"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 14s-6-3.700-6-8a3.300 3.300 0 0 1 6-1.900A3.300 3.300 0 0 1 14 6c0 4.300-6 8-6 8z"/></svg></button></div>
+    <div class="info">
+      <h3>${p.n}</h3><div class="meta">${p.d}</div>
+      <div class="price ${p.price?'':'q'}">${p.price?brl(p.price):'Consulte o valor'}</div>
+      <div class="sizes" data-id="${p.id}">${p.sz.map(s=>`<button class="sz ${selSize[p.id]===s?'on':''}" data-s="${s}">${s}</button>`).join('')}</div>
+      <button class="btn btn-dark add" data-id="${p.id}">Adicionar à sacola</button>
+    </div>
+  </article>`).join('');
+  document.querySelectorAll('.sizes').forEach(w=>w.querySelectorAll('.sz').forEach(b=>b.onclick=()=>{selSize[w.dataset.id]=b.dataset.s;w.querySelectorAll('.sz').forEach(x=>x.classList.toggle('on',x===b))}));
+  document.querySelectorAll('.card .add').forEach(b=>b.onclick=()=>addToCart(b.dataset.id,selSize[b.dataset.id],true));
+  document.querySelectorAll('.fav').forEach(b=>b.onclick=()=>toggleFav(b.dataset.id));
+}
+function toggleFav(id){favs=favs.includes(id)?favs.filter(x=>x!==id):[...favs,id];save('bella_favs',favs);$('#favCount').textContent=favs.length;renderGrid();}
+$('#favBtn').onclick=()=>{showFavs=true;renderFilters();renderGrid();$('#produtos').scrollIntoView({behavior:'smooth'});if(!favs.length)toast('Toque no coração para favoritar peças')};
+
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2200)}
+function addToCart(id,size,needSize){
+  const p=PRODUCTS.find(x=>x.id===id);
+  if(!size){ if(needSize){toast('Escolha um tamanho primeiro');return} size=p.sz[0]; }
+  const ex=cart.find(i=>i.id===id&&i.size===size);
+  if(ex)ex.q++;else cart.push({id,size,q:1});
+  save('bella_cart',cart);renderCart();toast('Adicionado à sacola ✓');
+}
+document.querySelectorAll('.add-promo').forEach(b=>b.onclick=()=>{
+  const p=PRODUCTS.find(x=>x.id===b.dataset.id);
+  const s=prompt('Qual tamanho você deseja? ('+p.sz.join(', ')+')',p.sz[0]);
+  if(s)addToCart(p.id,s.trim(),false);
+});
+function renderCart(){
+  const n=cart.reduce((a,i)=>a+i.q,0);$('#cartCount').textContent=n;
+  const box=$('#items');
+  if(!cart.length){box.innerHTML='<div class="empty">Sua sacola está vazia.<br>Escolha suas peças favoritas!</div>';$('#df').style.display='none';return}
+  $('#df').style.display='grid';
+  let total=0,quote=0;
+  box.innerHTML=cart.map((i,idx)=>{const p=PRODUCTS.find(x=>x.id===i.id);if(p.price)total+=p.price*i.q;else quote+=i.q;
+    return `<div class="it"><div class="im" style="background:${gradOf(p)}"></div><div><b>${p.n}</b><small>Tam. ${i.size} · ${p.price?brl(p.price):'valor a consultar'}</small><br><span class="qty"><button data-a="-" data-i="${idx}">−</button><span>${i.q}</span><button data-a="+" data-i="${idx}">+</button></span></div><button class="rm" data-i="${idx}">remover</button></div>`}).join('');
+  $('#total').textContent=brl(total);
+  $('#totNote').textContent=quote?`${quote} peça(s) sem valor no site: o valor será informado no atendimento.`:'';
+  box.querySelectorAll('.qty button').forEach(b=>b.onclick=()=>{const it=cart[b.dataset.i];it.q+=b.dataset.a==='+'?1:-1;if(it.q<1)cart.splice(b.dataset.i,1);save('bella_cart',cart);renderCart()});
+  box.querySelectorAll('.rm').forEach(b=>b.onclick=()=>{cart.splice(b.dataset.i,1);save('bella_cart',cart);renderCart()});
+}
+const openCart=()=>{$('#drawer').classList.add('on');$('#overlay').classList.add('on')};
+const closeCart=()=>{$('#drawer').classList.remove('on');$('#overlay').classList.remove('on')};
+$('#cartBtn').onclick=openCart;$('#dClose').onclick=closeCart;$('#overlay').onclick=closeCart;
+$('#checkout').onclick=()=>{
+  const name=$('#custName').value.trim(),city=$('#custCity').value.trim();
+  if(!name){toast('Informe seu nome');$('#custName').focus();return}
+  let total=0;
+  const lines=cart.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);if(p.price)total+=p.price*i.q;return `• ${i.q}x ${p.n} (tam. ${i.size}) - ${p.price?brl(p.price*i.q):'valor a consultar'}`});
+  const msg=`Olá, Bella Fashion! Meu nome é ${name}${city?` (${city})`:''} e quero fazer este pedido pelo site:\n\n${lines.join('\n')}\n\nTotal das peças com valor: ${brl(total)}\n\nPode confirmar disponibilidade, frete e forma de pagamento?`;
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');
+};
+
+// depoimentos
+let ti=0;
+function renderT(){
+  const per=window.innerWidth<=980?1:3;
+  const items=Array.from({length:per},(_,k)=>TESTI[(ti+k)%TESTI.length]);
+  $('#ttrack').innerHTML=items.map(t=>`<div class="t show"><div class="stars">★★★★★</div><p>“${t.t}”</p><div class="who"><span class="av">${t.n.replace(/[^A-Za-zÀ-ú]/g,'').charAt(0).toUpperCase()||'B'}</span><div><b>${t.n}</b><small>${t.s}</small></div></div></div>`).join('');
+}
+$('#tnext').onclick=()=>{ti=(ti+1)%TESTI.length;renderT()};
+$('#tprev').onclick=()=>{ti=(ti-1+TESTI.length)%TESTI.length;renderT()};
+setInterval(()=>{ti=(ti+1)%TESTI.length;renderT()},6000);
+window.addEventListener('resize',renderT);
+
+// newsletter via WhatsApp
+$('#newsForm').onsubmit=e=>{e.preventDefault();const n=$('#newsName').value.trim();
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(`Olá! Sou ${n} e quero receber as novidades e promoções da Bella Fashion.`)}`,'_blank');};
+
+// menu mobile + nav ativa + reveal
+$('#burger').onclick=()=>$('#nav').classList.toggle('on');
+document.querySelectorAll('nav a').forEach(a=>a.onclick=()=>$('#nav').classList.remove('on'));
+const secs=[...document.querySelectorAll('main section[id]')];
+addEventListener('scroll',()=>{const y=scrollY+120;let cur=secs[0];secs.forEach(s=>{if(s.offsetTop<=y)cur=s});
+  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id))},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+function observe(){document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el))}
+
+$('#yr').textContent=new Date().getFullYear();
+$('#favCount').textContent=favs.length;
+renderFilters();renderGrid();renderCart();renderT();observe();
+</script>
+</body>
+</html>
